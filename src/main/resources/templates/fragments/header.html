@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    th:href="@{/webjars/bootstrap/3.4.4/css/bootstrap.min.css}"
+    media="screen"/>
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}">
+    </script>
+
+    <link href="../../static/css/style.css"
+          th:href="@{css/style.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+
+<div th:fragment="header">
+    <nav class="navbar navbar-default">
+        <ul class="nav navbar-nav">
+            <li class="li-tab">
+                <button class="tablink" onclick="window.location.href='/books/home'">Home</button>
+            </li>
+            <li class="li-tab">
+                <button class="tablink" onclick="window.location.href='/books/patreon'">Patreon</button>
+            </li>
+            <li class="li-tab">
+                <button class="tablink" onclick="window.location.href='/books/'">My Lists</button>
+            </li>
+            <li class="li-tab">
+                <button class="tablink" onclick="window.location.href='/books/searchAPI'">All Books</button>
+            </li>
+        </ul>
+    </nav>
+</div>
+</div>
+</body>
+</html>

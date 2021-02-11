@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head lang="en">
+    <title>All Books</title>
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+<figure class="header">
+    <div class="title">
+        <h1 class="header-text">Search Books</h1>
+    </div>
+</figure>
+<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+<figure class="main-body">
+    <br>
+    <fieldset class="search-bar">
+        <div class="search-bar">
+            <label class="search-label" for="searchTerm">Search for Books:</label>
+            <input type="text" id="searchTerm">
+            <button id="book-search">Go</button>
+        </div>
+    </fieldset>
+    <br>
+    <div class="book-table">
+        <div class="table-style">
+            <table>
+                <thead>
+                <tr>
+                    <th class="search-table">Cover</th>
+                    <th class="search-table">Name</th>
+                    <th class="search-table">Author</th>
+                    <th class="search-table">Page Count</th>
+                    <th class="search-table">More Info</th>
+                    <th class="search-table">Add To A List</th>
+                </tr>
+                </thead>
+                <tbody id="row">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</figure>
+<script src="../js/AllBooks.js"></script>
+</body>
+
+</html>

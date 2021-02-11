@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          crossorigin="anonymous">
+    <title>Books</title>
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+<figure class="header">
+    <div class="title">
+        <h1 class="header-text">My Lists</h1>
+    </div>
+</figure>
+<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+<figure class="main-body">
+    <br>
+    <form class="form-horizontal" th:object="${book}" th:action="@{/books/save}" method="post">
+        <div class="input-field">
+            <label class="add-label">Author: </label>
+            <input type="text" th:field="*{author}" name="author">
+            <br>
+            <br>
+            <label class="add-label">Title: </label>
+            <input type="text" th:field="*{title}" name="title">
+            <br>
+            <br>
+            <label class="add-label">Pg Count: </label>
+            <input type="number" th:field="*{pageCount}" name="pageCount">
+            <br>
+            <br>
+            <label class="add-label">List Name: </label>
+            <input type="text" th:field="*{listName}" name="listName">
+            <br>
+            <br>
+            <button type="submit" class="btn-add">Create</button>
+        </div>
+    </form>
+</figure>
